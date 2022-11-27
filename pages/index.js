@@ -1,4 +1,4 @@
-import { Button } from "@mantine/core";
+import { Button, Title } from "@mantine/core";
 import Head from "next/head";
 import Image from "next/image";
 import RightArrow from "../icons/RightArrow";
@@ -22,7 +22,9 @@ export default function Home() {
           Get started by editing{" "}
           <code className={styles.code}>pages/index.js</code>
         </p>
-        <Button type="button">ahmed</Button>
+        <Title order={1}>This is h1 title</Title>
+
+        <Button>ahmed</Button>
         <Button variant="subtle" rightIcon={<RightArrow />}>
           ahmed
         </Button>
