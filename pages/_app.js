@@ -39,6 +39,14 @@ function MyApp({ Component, pageProps }) {
       withGlobalStyles
       withNormalizeCSS
       theme={{
+        fontFamily: "Manrope, sans-serif;",
+        fontSizes: {
+          xs: 13,
+          sm: 14,
+          md: 15,
+          lg: 16,
+          xl: 20,
+        },
         colors: {
           brand: ["transparent", "#FFFFFF", "#000000", "#D87D4A", "#FBAF85", "#101010", "#F1F1F1", "#FAFAFA", "rgba(0,0,0,0.5)", "transparent"],
         },
@@ -48,7 +56,7 @@ function MyApp({ Component, pageProps }) {
         },
         headings: {
           fontFamily: "Manrope, sans-serif;",
-
+          fontWeight: 700,
           // properties for individual headings, all of them are optional
           sizes: {
             h1: { fontSize: 56, lineHeight: "58px" },
