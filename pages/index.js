@@ -1,11 +1,11 @@
 import { Button, Input, Radio, Text, Title } from "@mantine/core";
 import Head from "next/head";
 import { useState } from "react";
-import Overline from "../components/globals/Overline";
-import Paragraph from "../components/globals/Paragraph";
-import Subtitle from "../components/globals/Subtitle";
-import RightArrow from "../icons/RightArrow";
-import styles from "../styles/Home.module.css";
+import styles from "@/styles/Home.module.css";
+import Paragraph from "@/components/globals/Paragraph";
+import Overline from "@/components/globals/Overline";
+import Subtitle from "@/components/globals/Subtitle";
+import RightArrow from "@/icons/RightArrow";
 
 export default function Home() {
   const [checked, setChecked] = useState(false);
@@ -20,7 +20,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <Title order={1}>This is h1 title</Title>
-        <Radio className="a" checked={checked} onChange={(event) => setChecked(!checked)} />
+        <Radio className="a" checked={checked} onChange={(event) => setChecked(event.currentTarget.value)} />
         <Paragraph>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, quia.</Paragraph>
         <Overline>ahmed</Overline>
         <Subtitle>ahmed</Subtitle>
