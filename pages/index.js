@@ -1,15 +1,20 @@
-import { Button, Input, Radio, Text, Title } from "@mantine/core";
+import { ActionIcon, Button, Group, NumberInput, Radio, Title, NumberInputHandlers } from "@mantine/core";
 import Head from "next/head";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import styles from "@/styles/Home.module.css";
 import Paragraph from "@/components/globals/Paragraph";
 import Overline from "@/components/globals/Overline";
 import Subtitle from "@/components/globals/Subtitle";
 import RightArrow from "@/icons/RightArrow";
+import { colors } from "@/config/theme";
+import SubtleButton from "@/components/globals/SubtleButton";
+import OutlineButton from "@/components/globals/OutlineButton";
+import Amount from "@/components/globals/Amount";
 
 export default function Home() {
   const [checked, setChecked] = useState(false);
-
+  const [value, setValue] = useState(1);
+  const handlers = useRef(NumberInputHandlers);
   return (
     <div className={styles.container}>
       <Head>
@@ -20,15 +25,21 @@ export default function Home() {
 
       <main className={styles.main}>
         <Title order={1}>This is h1 title</Title>
+        <Title order={2}>This is h2 title</Title>
+        <Title order={3}>This is h3 title</Title>
+        <Title order={4}>This is h4 title</Title>
+        <Title order={5}>This is h5 title</Title>
+        <Title order={6}>This is h6 title</Title>
+        <Amount />
         <Radio className="a" checked={checked} onChange={(event) => setChecked(event.currentTarget.value)} />
         <Paragraph>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, quia.</Paragraph>
-        <Overline>ahmed</Overline>
-        <Subtitle>ahmed</Subtitle>
-        <Button>ahmed</Button>
-        <Button variant="subtle" rightIcon={<RightArrow />}>
-          subtle button
-        </Button>
-        <Button variant="outline">outline button</Button>
+        <Overline>Overline</Overline>
+        <Subtitle>Subtitle</Subtitle>
+        <Button>see product</Button>
+        <SubtleButton>
+          shop
+        </SubtleButton>
+        <OutlineButton>see product</OutlineButton>
       </main>
     </div>
   );

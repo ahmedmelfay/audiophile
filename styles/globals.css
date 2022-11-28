@@ -44,6 +44,19 @@ h6 {
   letter-spacing: 1.3px;
 }
 
+.change-icon-on-hover{
+  line-height: 18px;
+  letter-spacing: 1px;
+  opacity: 0.25;
+  font-weight: 700;
+  transition: all 0.3s linear;
+}
+
+.change-icon-on-hover:hover{
+  color: #D87D4A;
+  opacity: 1;
+}
+
 * {
   box-sizing: border-box;
 }
