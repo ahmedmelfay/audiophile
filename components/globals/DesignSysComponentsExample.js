@@ -15,7 +15,7 @@ const DesignSysComponentsExample = () => {
   const [value, setValue] = useState("");
   const [isError, setIsError] = useState(false);
   useEffect(() => {
-    if (!value.match(/^[a-z ,.'-]+$/i) && value !== "") setIsError("Wrong Format");
+    if (!value.match(/^[a-z ,.'-]+$/i) && value !== "") setIsError(true);
     else setIsError(false);
     console.log(isError);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -39,7 +39,7 @@ const DesignSysComponentsExample = () => {
       <CustomTextInput
         value={value}
         label="Name"
-        isError={isError}
+        isError={isError ? "Wrong Format" : isError}
         placeholder="Insert Your Name"
         customProps={{ onChange: (e) => setValue(e.target.value) }}
       />
