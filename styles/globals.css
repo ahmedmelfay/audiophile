@@ -44,16 +44,38 @@ h6 {
   letter-spacing: 1.3px;
 }
 
-.change-icon-on-hover{
+.change-icon-on-hover {
   line-height: 18px;
   letter-spacing: 1px;
   opacity: 0.25;
   font-weight: 700;
   transition: all 0.3s linear;
 }
+/* 
+.text-input .mantine-186stvt,.text-input .mantine-1bdexr5 {
+  padding-right: 24px;
+  padding-left: 24px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: -0.25px;
+  height: 56px;
+  transition: all 0.3s linear;
+} */
 
-.change-icon-on-hover:hover{
-  color: #D87D4A;
+.text-input{
+  position: relative;
+}
+
+.text-input .mantine-186stvt {
+  caret-color: #d87d4a;
+}
+
+.text-input .mantine-TextInput-input:focus {
+  border: 1px solid #d87d4a;
+}
+
+.change-icon-on-hover:hover {
+  color: #d87d4a;
   opacity: 1;
 }
 

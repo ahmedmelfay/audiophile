@@ -1,5 +1,5 @@
 // Colors used in array ( Based  on design system )
-// 0:transparent, 1:#FFFFFF, 2:#000000, 3:#D87D4A, 4:#FBAF85, 5:#101010, 6:#F1F1F1, 7:#FAFAFA, 8:rgba(0,0,0,0.5), 9:transparent
+// 0:transparent, 1:#FFFFFF, 2:#000000, 3:#D87D4A, 4:#FBAF85, 5:#101010, 6:#F1F1F1, 7:#FAFAFA, 8:rgba(0,0,0,0.5), 9:#CD2C2C
 
 // Custom buttons based on the variant
 
@@ -24,12 +24,12 @@ const customButton = {
       },
       transition: "all 0.2s linear",
       border: params.variant === "outline" && `1px solid ${theme.colors.brand[2]}`,
-      height: "48px",
-      width: "160px",
-      fontSize: "xs",
-      fontWeight: "700",
-      borderRadius: "0px",
-      lineHeight: "17.76px",
+      height: 48,
+      width: 160,
+      fontSize: 13,
+      fontWeight: 700,
+      borderRadius: 0,
+      lineHeight: '17.76px',
       textTransform: "uppercase",
     },
   }),
@@ -45,7 +45,7 @@ export const theme = {
     xl: 20,
   },
   colors: {
-    brand: ["transparent", "#FFFFFF", "#000000", "#D87D4A", "#FBAF85", "#101010", "#F1F1F1", "#FAFAFA", "rgba(0,0,0,0.5)", "transparent"],
+    brand: ["transparent", "#FFFFFF", "#000000", "#D87D4A", "#FBAF85", "#101010", "#F1F1F1", "#FAFAFA", "rgba(0,0,0,0.5)", "#CD2C2C"],
   },
   primaryColor: "brand",
   components: {
