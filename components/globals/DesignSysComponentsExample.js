@@ -1,4 +1,4 @@
-import { Button, Title } from "@mantine/core";
+import { Title } from "@mantine/core";
 import { useEffect, useState } from "react";
 import Amount from "./Amount";
 import CustomRadioButton from "./CustomRadioButton";

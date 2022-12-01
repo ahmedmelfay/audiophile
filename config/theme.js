@@ -3,36 +3,55 @@
 
 // Custom buttons based on the variant
 
-const customButton = {
+const Button = {
   // Subscribe to theme and component params
-  styles: (theme, params) => ({
-    root: {
-      backgroundColor:
-        (params.variant === "filled" && `${theme.colors.brand[3]}`) ||
-        (params.variant === "outline" && `${theme.colors.brand[0]}`) ||
-        (params.variant === "subtle" && `${theme.colors.brand[0]}`),
-      color:
-        (params.variant === "filled" && `${theme.colors.brand[1]}`) ||
-        (params.variant === "outline" && `${theme.colors.brand[2]}`) ||
-        (params.variant === "subtle" && `${theme.colors.brand[8]}`),
-      "&:hover": {
+  styles: (theme, params) => {
+    return {
+      root: {
         backgroundColor:
-          (params.variant === "filled" && `${theme.colors.brand[4]}`) ||
-          (params.variant === "outline" && `${theme.colors.brand[2]}`) ||
+          (params.variant === "filled" && `${theme.colors.brand[3]}`) ||
+          (params.variant === "outline" && `${theme.colors.brand[0]}`) ||
           (params.variant === "subtle" && `${theme.colors.brand[0]}`),
-        color: (params.variant === "outline" && `${theme.colors.brand[1]}`) || (params.variant === "subtle" && `${theme.colors.brand[3]}`),
+        color:
+          (params.variant === "filled" && `${theme.colors.brand[1]}`) ||
+          (params.variant === "outline" && `${theme.colors.brand[2]}`) ||
+          (params.variant === "subtle" && `${theme.colors.brand[8]}`),
+        "&:hover": {
+          backgroundColor:
+            (params.variant === "filled" && `${theme.colors.brand[4]}`) ||
+            (params.variant === "outline" && `${theme.colors.brand[2]}`) ||
+            (params.variant === "subtle" && `${theme.colors.brand[0]}`),
+          color: (params.variant === "outline" && `${theme.colors.brand[1]}`) || (params.variant === "subtle" && `${theme.colors.brand[3]}`),
+        },
+        transition: "all 0.2s linear",
+        border: params.variant === "outline" && `1px solid ${theme.colors.brand[2]}`,
+        height: 48,
+        width: 160,
+        fontSize: 13,
+        fontWeight: 700,
+        borderRadius: 0,
+        lineHeight: "17.76px",
+        textTransform: "uppercase",
       },
-      transition: "all 0.2s linear",
-      border: params.variant === "outline" && `1px solid ${theme.colors.brand[2]}`,
-      height: 48,
-      width: 160,
-      fontSize: 13,
-      fontWeight: 700,
-      borderRadius: 0,
-      lineHeight: '17.76px',
-      textTransform: "uppercase",
-    },
-  }),
+    };
+  },
+};
+const Title = {
+  // Subscribe to theme and component params
+  styles: (theme, params) => {
+    return {
+      root: {
+        textTransform: "uppercase",
+        letterSpacing:
+          params.element === "h1" || params.element === "h4"
+            ? "2px"
+            : (params.element === "h2" && "1.5px") ||
+              (params.element === "h3" && "1.15px") ||
+              (params.element === "h5" && "1.7px") ||
+              (params.element === "h6" && "1.3px"),
+      },
+    };
+  },
 };
 
 export const theme = {
@@ -49,7 +68,8 @@ export const theme = {
   },
   primaryColor: "brand",
   components: {
-    Button: customButton,
+    Button,
+    Title,
   },
   headings: {
     fontFamily: "Manrope, sans-serif;",

@@ -9,6 +9,8 @@ const Amount = () => {
       <ActionIcon
         className="change-icon-on-hover"
         fz="xs"
+        fw={700}
+        opacity={0.25}
         style={{ borderRightWidth: 0 }}
         size={40}
         variant="transparent"
@@ -42,6 +44,8 @@ const Amount = () => {
       <ActionIcon
         className="change-icon-on-hover"
         fz="xs"
+        fw={700}
+        opacity={0.25}
         style={{ borderLeftWidth: 0 }}
         size={40}
         variant="transparent"

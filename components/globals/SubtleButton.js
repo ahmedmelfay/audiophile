@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import { Button } from "@mantine/core";
 import RightArrow from "@/icons/RightArrow";
 
-const SubtleButton = ({ title, children }) => {
+const SubtleButton = ({ title, children, customProps }) => {
   return (
-    <Button variant="subtle" rightIcon={<RightArrow />}>
+    <Button {...customProps} variant="subtle" rightIcon={<RightArrow />}>
       {title || children}
     </Button>
   );
@@ -13,10 +13,12 @@ const SubtleButton = ({ title, children }) => {
 
 SubtleButton.propTypes = {
   title: PropTypes.string,
+  customProps: PropTypes.object,
 };
 
 SubtleButton.defaultProps = {
   title: "",
+  customProps: {},
 };
 
 export default SubtleButton;

@@ -42,9 +42,11 @@ const CustomTextInput = ({ value, label, placeholder, customProps, isError }) =>
           fontSize: 13,
           caretColor: theme.colors.brand[3],
         },
+        root: {
+          position: "relative",
+        },
       }}
       value={value}
-      //   onChange={(e) => setValue(e.target.value)}
       error={isError}
       className="text-input"
       placeholder={placeholder}
@@ -64,11 +66,11 @@ CustomTextInput.propTypes = {
 };
 
 CustomTextInput.defaultProps = {
-    value: "",
-    label: "",
-    placeholder: "",
-    customProps: {},
-    isError: false,
+  value: "",
+  label: "",
+  placeholder: "",
+  customProps: {},
+  isError: false,
 };
 
 export default CustomTextInput;
