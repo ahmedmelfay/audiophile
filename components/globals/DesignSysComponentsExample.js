@@ -17,7 +17,6 @@ const DesignSysComponentsExample = () => {
   useEffect(() => {
     if (!value.match(/^[a-z ,.'-]+$/i) && value !== "") setIsError(true);
     else setIsError(false);
-    console.log(isError);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [value]);
   return (

@@ -11,6 +11,10 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+}
+
 .change-icon-on-hover {
   letter-spacing: 1px;
   transition: all 0.3s linear;
@@ -25,8 +29,27 @@ a {
   opacity: 1;
 }
 
+.navbar-sticky {
+  position: sticky;
+  animation-name: navigation-down;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+.navbar-relative {
+  position: relative;
+}
+
 * {
   box-sizing: border-box;
+}
+
+@keyframes navigation-down {
+  from {
+    top: -90px;
+  }
+  to {
+    top: 0px;
+  }
 }
 
 @media (prefers-color-scheme: dark) {

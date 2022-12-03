@@ -5,7 +5,13 @@ const Amount = () => {
   const [value, setValue] = useState(1);
   const handlers = useRef(NumberInputHandlers);
   return (
-    <Group bg="brand.6" spacing={0}>
+    <Group
+      sx={(theme) => ({
+        width: 120,
+      })}
+      bg="brand.6"
+      spacing={0}
+    >
       <ActionIcon
         className="change-icon-on-hover"
         fz="xs"

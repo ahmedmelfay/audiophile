@@ -53,6 +53,23 @@ const Title = {
     };
   },
 };
+const Container = {
+  defaultProps: {
+    sizes: {
+      xs: 375,
+      sm: 768,
+      lg: 1440,
+    },
+  },
+  styles: (theme, params) => {
+    return {
+      root: {
+        paddingLeft: (params.size === "lg" && 165) || (params.size === "sm" && 39) || (params.size === "xs" && 24),
+        paddingRight: (params.size === "lg" && 165) || (params.size === "sm" && 40) || (params.size === "xs" && 24),
+      },
+    };
+  },
+};
 
 export const theme = {
   fontFamily: "Manrope, sans-serif;",
@@ -70,6 +87,7 @@ export const theme = {
   components: {
     Button,
     Title,
+    Container,
   },
   headings: {
     fontFamily: "Manrope, sans-serif;",
@@ -85,8 +103,7 @@ export const theme = {
     },
   },
   breakpoints: {
-    sm: 375,
-    md: 768,
+    xs: 375,
     lg: 1440,
   },
 };
